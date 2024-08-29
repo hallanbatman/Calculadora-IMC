@@ -1,5 +1,6 @@
 package com.comunidadedevspace.imc
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -13,15 +14,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Recuperar os componentes EditText
-        //Criar uma variável e associar o componente de UI
-        //Recuperar botao da tela
-
-        //Colocar acao no botao setOnClickListener
-        //Recuperar o text digitado
-
-        val edtPeso: EditText = findViewById<TextInputEditText>(R.id.edt_peso)
-        val edtAltura: EditText = findViewById<TextInputEditText>(R.id.edt_altura)
+        val edtPeso = findViewById<TextInputEditText>(R.id.edt_peso)
+        val edtAltura = findViewById<TextInputEditText>(R.id.edt_altura)
         val btnCalcular = findViewById<Button>(R.id.btn_calcular)
 
         btnCalcular.setOnClickListener {
@@ -46,7 +40,16 @@ class MainActivity : AppCompatActivity() {
                 val alturaQ2 = altura * altura
                 val resultado = peso / alturaQ2
 
-                println("Clicou" + resultado)
+                //Navegar para proxima tela
+                //Criar o layout da proxima tela
+                //Passar dados(resultado) para proxima tela
+                //intent - Classe do proprio Android
+
+                val intent = Intent(this, ResultActivity::class.java)
+                intent.putExtra(KEY_RESULT_IMC, resultado)
+                startActivity(intent)
+
+                println("MainActivity = Clicou: " + resultado)
             }
         }
     }

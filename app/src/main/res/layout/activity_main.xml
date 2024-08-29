@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    //Peso
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         android:layout_width="match_parent"
@@ -17,14 +16,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            id="@+id/edt_peso"
+            android:id="@+id/edt_peso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Digite seu peso ex: 70.200"
             android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    //Altura
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,7 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
-            id="@+id/edt_altura"
+            android:id="@+id/edt_altura"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
