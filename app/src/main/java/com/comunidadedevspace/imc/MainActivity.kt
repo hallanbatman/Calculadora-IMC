@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
             val alturaStr: String = edtAltura.text.toString()
 
             if (pesoStr == "" || alturaStr == "") {
-                //Mostrar mensage para usuario
 
                 Snackbar.make(
                     edtPeso,
